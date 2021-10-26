@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="MovieTableViewCell" selectionStyle="default" indentationWidth="10" rowHeight="311" id="KGk-i7-Jjw" customClass="MovieTableViewCell" customModule="SpryoxMoviesWorld" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="311"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="311"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EqP-rK-J6D" userLabel="MovieImage">
+                        <rect key="frame" x="16" y="0.0" width="288" height="150.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="150.5" id="rNv-rq-Lu6"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gUA-dI-DfA" userLabel="FavourableButton">
+                        <rect key="frame" x="268" y="158.5" width="44" height="44"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="44" id="ktR-7n-jjl"/>
+                            <constraint firstAttribute="height" constant="44" id="uMn-Mp-DiN"/>
+                        </constraints>
+                        <color key="tintColor" red="1" green="0.46274509803921571" blue="0.52549019607843139" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <state key="normal">
+                            <color key="titleColor" red="1" green="0.4611537832" blue="0.52682277349999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </state>
+                        <connections>
+                            <action selector="favouriteTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="EYO-GR-Hi4"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dhoom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cwO-ob-tlu" userLabel="MovieTitle">
+                        <rect key="frame" x="16" y="163.5" width="244" height="34.5"/>
+                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="25"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie casted by John abraham and Isha deol Movie casted by John abraham and Isha deol" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kld-1s-KwG" userLabel="MovieDescription">
+                        <rect key="frame" x="16" y="210.5" width="288" height="56.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Released On: 25 Oct 2021" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RAi-zW-8fb" userLabel="MovieReleasedDate">
+                        <rect key="frame" x="16" y="275" width="202" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="18e-jR-9US"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ratings: 4.5" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oT0-PX-qYt" userLabel="MovieRatings">
+                        <rect key="frame" x="234" y="275" width="70" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="ICV-9a-5mV"/>
+                            <constraint firstAttribute="width" constant="70" id="wvH-bq-9jD"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lVO-61-MTl" userLabel="FavourableImage">
+                        <rect key="frame" x="278" y="168" width="24" height="25.5"/>
+                        <color key="tintColor" red="1" green="0.4611537832" blue="0.52682277349999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="24" id="Cwt-Cg-f5A"/>
+                            <constraint firstAttribute="height" constant="24" id="f4i-qg-TnZ"/>
+                        </constraints>
+                        <imageReference key="image" image="heart" catalog="system" symbolScale="large" renderingMode="original"/>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="oT0-PX-qYt" secondAttribute="bottom" constant="16" id="4ea-vn-sEm"/>
+                    <constraint firstItem="RAi-zW-8fb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="7f0-Rz-eeh"/>
+                    <constraint firstAttribute="trailing" secondItem="oT0-PX-qYt" secondAttribute="trailing" constant="16" id="DQs-X5-XM9"/>
+                    <constraint firstItem="kld-1s-KwG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="E5t-Kq-Gpb"/>
+                    <constraint firstItem="gUA-dI-DfA" firstAttribute="top" secondItem="EqP-rK-J6D" secondAttribute="bottom" constant="8" id="Gaq-o7-RxK"/>
+                    <constraint firstAttribute="trailing" secondItem="gUA-dI-DfA" secondAttribute="trailing" constant="8" id="Md9-Rh-xAD"/>
+                    <constraint firstItem="EqP-rK-J6D" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="OYB-AR-3X6"/>
+                    <constraint firstItem="lVO-61-MTl" firstAttribute="centerY" secondItem="gUA-dI-DfA" secondAttribute="centerY" id="QfQ-YR-KF2"/>
+                    <constraint firstItem="lVO-61-MTl" firstAttribute="centerX" secondItem="gUA-dI-DfA" secondAttribute="centerX" id="Uow-FP-BUZ"/>
+                    <constraint firstAttribute="trailing" secondItem="EqP-rK-J6D" secondAttribute="trailing" constant="16" id="Yao-5v-ai0"/>
+                    <constraint firstItem="cwO-ob-tlu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="a8a-Mc-ONP"/>
+                    <constraint firstItem="EqP-rK-J6D" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="dMl-o0-I7N"/>
+                    <constraint firstItem="cwO-ob-tlu" firstAttribute="centerY" secondItem="gUA-dI-DfA" secondAttribute="centerY" id="gfp-Ae-gbl"/>
+                    <constraint firstAttribute="trailing" secondItem="kld-1s-KwG" secondAttribute="trailing" constant="16" id="lqy-6Y-kBG"/>
+                    <constraint firstItem="oT0-PX-qYt" firstAttribute="leading" secondItem="RAi-zW-8fb" secondAttribute="trailing" constant="16" id="oh4-7P-TXa"/>
+                    <constraint firstItem="gUA-dI-DfA" firstAttribute="leading" secondItem="cwO-ob-tlu" secondAttribute="trailing" constant="8" id="qMK-Kk-gSf"/>
+                    <constraint firstItem="kld-1s-KwG" firstAttribute="top" secondItem="gUA-dI-DfA" secondAttribute="bottom" constant="8" id="uwf-KO-Dhv"/>
+                    <constraint firstAttribute="bottom" secondItem="RAi-zW-8fb" secondAttribute="bottom" constant="16" id="zPv-Vt-yio"/>
+                    <constraint firstItem="RAi-zW-8fb" firstAttribute="top" secondItem="kld-1s-KwG" secondAttribute="bottom" constant="8" id="zmM-Hs-ao1"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="movieDescriptionLabel" destination="kld-1s-KwG" id="ckO-2U-4Yu"/>
+                <outlet property="movieFavourableButton" destination="gUA-dI-DfA" id="pxq-rq-4wH"/>
+                <outlet property="movieFavourableImage" destination="lVO-61-MTl" id="wIJ-Gf-KTM"/>
+                <outlet property="movieNameLabel" destination="cwO-ob-tlu" id="5Sa-f4-2UH"/>
+                <outlet property="moviePosterImage" destination="EqP-rK-J6D" id="882-c6-n6R"/>
+                <outlet property="movieRatingsLabel" destination="oT0-PX-qYt" id="G6W-I1-eM3"/>
+                <outlet property="movieReleasedDateLabel" destination="RAi-zW-8fb" id="wvx-Zq-3z3"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="112.16517857142857"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="heart" catalog="system" width="128" height="109"/>
+    </resources>
+</document>

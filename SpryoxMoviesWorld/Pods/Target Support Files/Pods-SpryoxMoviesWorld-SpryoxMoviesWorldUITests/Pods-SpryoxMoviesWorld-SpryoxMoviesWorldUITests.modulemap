@@ -1,0 +1,6 @@
+framework module Pods_SpryoxMoviesWorld_SpryoxMoviesWorldUITests {
+  umbrella header "Pods-SpryoxMoviesWorld-SpryoxMoviesWorldUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

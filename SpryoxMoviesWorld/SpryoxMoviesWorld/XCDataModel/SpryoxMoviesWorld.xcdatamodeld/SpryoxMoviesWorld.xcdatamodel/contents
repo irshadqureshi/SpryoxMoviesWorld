@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="19H1419" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Category" representedClassName="Category" syncable="YES" codeGenerationType="class">
+        <attribute name="categoryCode" optional="YES" attributeType="String"/>
+        <attribute name="categoryName" optional="YES" attributeType="String"/>
+        <relationship name="movie" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Movie" inverseName="category" inverseEntity="Movie"/>
+    </entity>
+    <entity name="Location" representedClassName="Location" syncable="YES" codeGenerationType="class">
+        <attribute name="latitude" optional="YES" attributeType="String"/>
+        <attribute name="longitude" optional="YES" attributeType="String"/>
+        <relationship name="moive" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Movie" inverseName="location" inverseEntity="Movie"/>
+    </entity>
+    <entity name="Movie" representedClassName="Movie" syncable="YES" codeGenerationType="class">
+        <attribute name="isFavourite" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="movieBanner" optional="YES" attributeType="String"/>
+        <attribute name="movieIcon" optional="YES" attributeType="String"/>
+        <attribute name="movieListDescription" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="ratings" optional="YES" attributeType="String"/>
+        <attribute name="releaseYear" optional="YES" attributeType="String"/>
+        <relationship name="category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Category" inverseName="movie" inverseEntity="Category"/>
+        <relationship name="location" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Location" inverseName="moive" inverseEntity="Location"/>
+    </entity>
+    <elements>
+        <element name="Category" positionX="-54" positionY="63" width="128" height="88"/>
+        <element name="Movie" positionX="-36" positionY="72" width="128" height="178"/>
+        <element name="Location" positionX="-18" positionY="81" width="128" height="88"/>
+    </elements>
+</model>
