@@ -53,7 +53,6 @@ class MovieDetailsView: BaseViewController, MovieDetailsPresenterToView {
             theatreMapView.addAnnotation(point)
         }
         theatreMapView.showAnnotations(viewModel.annotationArray, animated: true)
-//        theatreMapView.setCenter(viewModel.location, animated: false)
     }
     
 }
@@ -74,27 +73,4 @@ extension MovieDetailsView: MKMapViewDelegate{
 
             return annotationView
     }
-    
-    func mapView(_ mapView: MKMapView, didAdd views: [MKAnnotationView]) {
-        if let annotation = views.first(where: { $0.reuseIdentifier == "AnnotId" })?.annotation {
-            mapView.selectAnnotation(annotation, animated: true)
-        }
-    }
-    
-    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-//        let gesture = UITapGestureRecognizer(target: self, action: #selector(self.calloutTapped(_:)))
-//        view.addGestureRecognizer(gesture)
-    }
-    
-    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
-        print("calloutAccessoryControlTapped")
-     }
-
-//    @objc func calloutTapped(_ sender:UITapGestureRecognizer) {
-//        let encoded = venueModel.venue_title.addingPercentEncoding(withAllowedCharacters: .alphanumerics) ?? ""
-//        guard let url = URL(string:"maps://?q=\(encoded)&ll=\(venueModel.location_lat),\(venueModel.location_lng)") else { return }
-//        if UIApplication.shared.canOpenURL(url) {
-//            UIApplication.shared.open(url)
-//        }
-//    }
 }
